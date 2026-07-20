@@ -1,22 +1,5 @@
-if (Boolean(52)) {
-    // Run
-}
-s="hello reader"
-if ("hello") {
-    console.log(s)
-}
-if ([]) {
-    console.log("Array");
-}
+let user = "";
+let guest = "Guest";
 
-if ({}) {
-    console.log("Object");
-}
-
-if ("") {
-    console.log("Empty String");
-}
-
-if (" ") {
-    console.log("Space");
-}
+console.log(user || guest);
+console.log("" || "Mahaveer");
