@@ -1,9 +1,9 @@
-console.log(Boolean(0));
-console.log(Boolean(1));
-console.log(Boolean(""));
-console.log(Boolean(" "));
-console.log(Boolean("Hello"));
-console.log(Boolean(null));
-console.log(Boolean(undefined));
-console.log(Boolean([]));
-console.log(Boolean({}));
+//js false only 8 values 
+false 
+0
+-0
+""
+null 
+undefined
+NaN
+0n// bigint
