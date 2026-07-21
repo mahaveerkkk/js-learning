@@ -1,12 +1,21 @@
-let user = "";
-let guest = "Guest";
+//day 4 today lean function 
+// function kya h
+function sayHello(){
+    console.log("Hello");
+}
+//here sayHello is a verible jiske under function value store h
+sayHello();
 
-console.log(user || guest);
-console.log("" || "Mahaveer");
-console.log(false || 0 || "" || null || undefined || "Mahaveer");
 
-console.log(1 && "Hello" && [] && {} && "JS");
+function test() {
+    console.log("A");
+}
 
-console.log("" && 100);
+console.log(test);
 
-console.log([] || {});
+
+function test() {
+    console.log("A");
+}
+
+console.log(test());
