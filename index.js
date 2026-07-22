@@ -1,31 +1,53 @@
-//day 4 today lean function 
-// function kya h
-function sayHello(){
-    console.log("Hello");
+function showResult(name, marks){
+    if (name === "" || marks === "") {
+        return "Please enter both name and marks.";
+    }
+    if (marks < 0 || marks > 100) {
+        return "Marks should be between 0 and 100.";
+    }
+    if (marks >= 90) {
+        grade ="A";
+    } else if (marks >= 80) {
+        grade = "B";
+    } else if (marks >= 70) {
+        grade = "C";
+    } else if (marks >= 60) {
+        grade = "D";
+    } else if (marks >= 50) {
+        grade = "E";
+    }else {
+        grade = "F";
+    }
+    if (grade==="F") {
+        status = "Fail";
+    } else {
+        status = "Pass";
+    }
+     
+    // return name + " -> " + grade + " -> " + status;
+    console.log(`
+=========================
+Student Report
+=========================
+Name   : ${name}
+Marks  : ${marks}
+Grade  : ${grade}
+Result : ${status}
+=========================
+`);
 }
-//here sayHello is a verible jiske under function value store h
-function add() {
-    return 10;
-}
-
-// console.log(add);
-
-// console.log(add());
-
-// let x = add;
-
-// console.log(x());
-
-// console.log(typeof add);
 
 
+// +
+// console.log("=====================================");console.log("\n");
+// console.log("Student Report");console.log("\n");
+// console.log("=====================================");console.log("\n");
 
-function add() {
-    return 10;
-}
+// console.log("Name:",name);
+// console.log("Marks:",marks);
+// console.log("Grade:",result);
+// console.log("Status:",status);
 
-let x = add;
 
-add = 100;
-console.log(add);
-console.log(x());
+//  console.log(name, "->",grade, "->", status);
+console.log(showResult("John Doe", 85));
