@@ -1,13 +1,30 @@
+//smart calculator
 function add(a, b) {
     return a + b;
 }
-
+function subtract(a, b) {
+    return a - b;
+}
 function multiply(a, b) {
     return a * b;
 }
+function divide(a, b) {
+    if (b === 0) {
+        throw new Error("Cannot divide by zero");
+    }
+    return a / b;
+}  
 
-function calculate(x, y, operation) {
-    return operation(x, y);
+
+function power(a, b) {
+    return a ** b;
 }
 
-console.log(calculate(10, 20, multiply));
+function calculate(a, b, operation) {
+    return operation(a, b);
+} 
+console.log(calculate(10, 5, add)); // Output: 15
+console.log(calculate(10, 5, subtract)); // Output: 5
+console.log(calculate(10, 5, multiply)); // Output: 50
+console.log(calculate(10, 5, divide)); // Output: 2
+console.log(calculate(10, 5, power)); // Output: 100000
