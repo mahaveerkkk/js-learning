@@ -1,30 +1,18 @@
-//smart calculator
-function add(a, b) {
-    return a + b;
+//day 7 aairo fuction
+const hello = (name) =>{
+    return "hello " + name;
+
 }
-function subtract(a, b) {
-    return a - b;
+const squr =(num)=>{
+    return num*num;
 }
-function multiply(a, b) {
-    return a * b;
-}
-function divide(a, b) {
-    if (b === 0) {
-        throw new Error("Cannot divide by zero");
+const factorial = (num) =>{
+    if(num === 0 || num === 1){
+        return 1;
+    }else{
+        return num * factorial(num - 1);
     }
-    return a / b;
-}  
-
-
-function power(a, b) {
-    return a ** b;
 }
-
-function calculate(a, b, operation) {
-    return operation(a, b);
-} 
-console.log(calculate(10, 5, add)); // Output: 15
-console.log(calculate(10, 5, subtract)); // Output: 5
-console.log(calculate(10, 5, multiply)); // Output: 50
-console.log(calculate(10, 5, divide)); // Output: 2
-console.log(calculate(10, 5, power)); // Output: 100000
+console.log(hello("aairo"));
+console.log(squr(5));
+console.log(factorial(65));
