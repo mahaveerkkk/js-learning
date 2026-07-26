@@ -1,33 +1,27 @@
-// practice time closure
-const  counter = () => {
-    let count = 0;
-    return () => {
-        count++;
-        return count;
+// day 9 objects deep dive 
+let user1 = {
+    name: "Mahaveer"
+};
+
+let user2 = user1;
+
+user2 = {
+    name: "Rahul"
+};
+
+console.log(user1.name);
+console.log(user2.name);
+
+let a = {
+    x: 10,
+    y: {
+        z: 20
     }
-}
+};
 
-const increment = counter();
-console.log(increment()); // 1
-console.log(increment()); // 2
-console.log(increment()); // 3
+let b = structuredClone(a);
 
+b.y.z = 100;
 
-const logiin  = () => {
-    attempt = 0;
-    return () => {
-        if (attempt < 3) {
-            attempt++;
-            console.log(`You have ${3 - attempt} attempts left`);
-        } else {
-            console.log("Account locked");
-        }
-    }
-}
-const login = logiin();
-
-console.log(login()); // Attempt 1
-console.log(login()); // Attempt 2
-console.log(login()); // Attempt 3
-console.log(login()); // Account Locked
-console.log(login()); // Account Locked
+console.log(a.y.z); // ?
+console.log(b.y.z); // ?
