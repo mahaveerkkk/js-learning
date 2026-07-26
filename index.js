@@ -1,36 +1,33 @@
-//day 8 Closures 
-function outer() {
+// practice time closure
+const  counter = () => {
     let count = 0;
-
-    function inner() {
+    return () => {
         count++;
-        console.log(count);
+        return count;
     }
-
-    return inner;
 }
 
-const counter = outer();
+const increment = counter();
+console.log(increment()); // 1
+console.log(increment()); // 2
+console.log(increment()); // 3
 
-counter();
-counter();
-counter();
 
-function outer() {
-    let x = 10;
-
-    return function () {
-        x++;
-        return x;
-    };
+const logiin  = () => {
+    attempt = 0;
+    return () => {
+        if (attempt < 3) {
+            attempt++;
+            console.log(`You have ${3 - attempt} attempts left`);
+        } else {
+            console.log("Account locked");
+        }
+    }
 }
+const login = logiin();
 
-const a = outer();
-const b = outer();
-const c = outer();
-
-console.log(a()); // ?
-console.log(a()); // ?
-console.log(b()); // ?
-console.log(a()); // ?
-console.log(b()); // ?
+console.log(login()); // Attempt 1
+console.log(login()); // Attempt 2
+console.log(login()); // Attempt 3
+console.log(login()); // Account Locked
+console.log(login()); // Account Locked
