@@ -1,27 +1,47 @@
-// day 9 objects deep dive 
-let user1 = {
-    name: "Mahaveer"
-};
+// day 10 Array 
+// Q1
+///////////////////////////////////
+// console.log(a); // 10
+// console.log(b); // 20
+// Q2
+// let a = { x: 10 };
+// let b = a;
 
-let user2 = user1;
+// b.x = 20;
 
-user2 = {
-    name: "Rahul"
-};
+// console.log(a.x); // 20
+// Q3
+// let a = { x: 10 };
+// let b = { ...a };
 
-console.log(user1.name);
-console.log(user2.name);
+// b.x = 20;
 
-let a = {
-    x: 10,
-    y: {
-        z: 20
-    }
-};
+// // console.log(a.x);10
+// // Q4
+// // Q4
+// let a = {
+//     x: {
+//         y: 10
+//     }
+// };
 
-let b = structuredClone(a);
+// let b = { ...a };
 
-b.y.z = 100;
+// b.x.y = 50;
 
-console.log(a.y.z); // ?
-console.log(b.y.z); // ?
+// console.log(a.x.y);
+
+
+// Q5
+// let a = structuredClone({
+//     x: {
+//         y: 10
+//     }
+// });
+
+// let b = structuredClone(a);
+
+// b.x.y = 100;
+
+// console.log(a.x.y);10
+// console.log(b.x.y);100
